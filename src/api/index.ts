@@ -2,6 +2,7 @@ import axios from "axios";
 
 const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const apiUrl = 'http://a0830433.xsph.ru';
+const currentUrl = window.location.href;
 
 const $host = axios.create({
     baseURL: corsProxyUrl + apiUrl,
@@ -11,7 +12,7 @@ const $host = axios.create({
 });
 
 $host.interceptors.request.use(config => {
-    config.headers['Origin'] = 'https://pt2cpt-5173.csb.app/';
+    config.headers['Origin'] = currentUrl;
     config.headers['X-Requested-With'] = 'XMLHttpRequest';
     return config;
 });
