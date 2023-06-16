@@ -24,9 +24,11 @@ const CommentsList: FC = () => {
 
     useEffect(() => {
         if (!loading) {
-            let first = comments.Messages[0]?.id
-            let last = comments.Messages[comments.Messages.length - 1]?.id
-            subscribe(first, last, direction, false)
+            if (comments.Messages) {
+                let first = comments.Messages[0]?.id
+                let last = comments.Messages[comments.Messages.length - 1]?.id
+                subscribe(first, last, direction, false)
+            }
         }
     }, [comments.Messages?.length])
 
@@ -62,7 +64,7 @@ const CommentsList: FC = () => {
                 },
             })
             if (data === 'no message') {
-                subscribe(first, last, direction) 
+                subscribe(first, last, direction)
             } else {
                 dispatch(addLastComment({ comment: data.Messages, direction }))
             }
