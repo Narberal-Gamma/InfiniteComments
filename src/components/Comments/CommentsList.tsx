@@ -33,7 +33,7 @@ const Comments: FC = () => {
                 }
             }
         }
-    }, [comments.Messages.length, again])
+    }, [comments.Messages?.length, again])
 
     const changeDirection = (direction: string) => {
         if (stop) {
