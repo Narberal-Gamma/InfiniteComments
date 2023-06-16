@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    margin: 10px 0;
+}
+
+.text {
+    padding: 0 10px;
+}
+
+.text > div {
+    margin: 5px 0;
+    color: #808080;
+    cursor: pointer;
+}
+
+.text > p {
+    margin-bottom: 10px;
+}
+
+.time {
+    color: #808080;
+}
+
+.image, .video {
+    max-height: 259px;
+    border-radius: 4px;
+}
+
+.image {
+    width: 146px;
+}
+
+.video {
+    width: 292px;
+}

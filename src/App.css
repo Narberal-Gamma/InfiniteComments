@@ -1,0 +1,15 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Lato';
+}
+
+body {
+	background: lightgray;
+}
+
+.app {
+	width: 1280px;
+	margin: 20px auto;	
+}
